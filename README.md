@@ -56,7 +56,7 @@ The GBD DSP library employs [*KISS (Keep It Simple, Stupid) FFT*](https://github
   
 ## Documentation and Tutorials
 
-Check the [*GBD wiki*](https://github.com/generic-beat-detector/GBD/wiki) for resources on the GBD IoT framework, GBD HowTos, GBD maker guides, etc.
+Check the [*GBD wiki*](https://github.com/andy3471/GBD/wiki) for resources on the GBD IoT framework, GBD HowTos, GBD maker guides, etc.
 
 
 
