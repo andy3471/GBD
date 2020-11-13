@@ -77,12 +77,47 @@ int main(void)
 			char str[12] = "";
 			sprintf(str, "%d", bcnt);
 
-			fptr = fopen("output.html", "w"); // "w" defines "writing mode"
+			fptr = fopen("/var/www/html/kick.html", "w"); // "w" defines "writing mode"
 
 			fprintf(fptr, "%d", bcnt);
 
 			fclose(fptr);
 		}
+
+		if (beat_cnt_map[SNARE] != prevcnt[SNARE]) {
+			prevcnt[SNARE] = beat_cnt_map[SNARE];
+			printf("\tSnareHit (%i)\n", scnt++);
+
+			FILE * fptr;
+			int i;
+			char fn[50];
+			char str[12] = "";
+			sprintf(str, "%d", scnt);
+
+			fptr = fopen("/var/www/html/snare.html", "w"); // "w" defines "writing mode"
+
+			fprintf(fptr, "%d", scnt);
+
+			fclose(fptr);
+		}
+
+		if (beat_cnt_map[CYMBALS] != prevcnt[CYMBALS]) {
+			prevcnt[CYMBALS] = beat_cnt_map[CYMBALS];
+			printf("\t\tTweeters (%i)\n", ccnt++);
+
+			FILE * fptr;
+			int i;
+			char fn[50];
+			char str[12] = "";
+			sprintf(str, "%d", ccnt);
+
+			fptr = fopen("/var/www/html/cymbal.html", "w"); // "w" defines "writing mode"
+
+			fprintf(fptr, "%d", ccnt);
+
+			fclose(fptr);
+		}
+ 
 	}
 	return 0;
 }
